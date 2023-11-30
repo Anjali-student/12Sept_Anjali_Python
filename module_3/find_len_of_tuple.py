@@ -3,4 +3,4 @@ print(listx)
 #use the tuple() function built-in Python, passing as parameter the list
 tuplex = tuple(listx)
 print(tuplex)
-print(len(tup1))
+print(len(tuplex))
