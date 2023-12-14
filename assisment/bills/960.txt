@@ -1,0 +1,18 @@
+	**Welcome Customer**
+
+Bill Number: 960
+Customer Name: myname
+Customer Phone No.: 111111111
+=====================================
+Product		QTY		Price
+=====================================
+Bath Soap		2		40
+Food Oil		1		200
+Frooti		1		10
+-------------------------------------
+Cosmetics Tax			4.8Rs
+Grocery Tax			10.0Rs
+Other Tax			10 Rs
+
+Total Bill			266.0
+-------------------------------------

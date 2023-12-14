@@ -1,0 +1,16 @@
+	**Welcome Customer**
+
+Bill Number: 772
+Customer Name: ancdd
+Customer Phone No.: 111
+=====================================
+Product		QTY		Price
+=====================================
+Frooti		5		50
+-------------------------------------
+Cosmetics Tax			0.0Rs
+Grocery Tax			0.0Rs
+Other Tax			50 Rs
+
+Total Bill			56.0
+-------------------------------------

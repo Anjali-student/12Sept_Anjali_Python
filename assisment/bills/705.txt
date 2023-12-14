@@ -1,0 +1,18 @@
+	**Welcome Customer**
+
+Bill Number: 705
+Customer Name: kishan
+Customer Phone No.: 4333
+=====================================
+Product		QTY		Price
+=====================================
+Bath Soap		1		20
+Daal		3		450
+Biscuits		3		30
+-------------------------------------
+Cosmetics Tax			2.4Rs
+Grocery Tax			22.5Rs
+Other Tax			30 Rs
+
+Total Bill			528.5
+-------------------------------------

@@ -1,0 +1,19 @@
+	**Welcome Customer**
+
+Bill Number: 992
+Customer Name: Customer2
+Customer Phone No.: 912393474
+=====================================
+Product		QTY		Price
+=====================================
+Bath Soap		5		100
+Hair Spray		8		1200
+Food Oil		1		200
+Biscuits		10		100
+-------------------------------------
+Cosmetics Tax			156.0Rs
+Grocery Tax			10.0Rs
+Other Tax			100 Rs
+
+Total Bill			1778.0
+-------------------------------------

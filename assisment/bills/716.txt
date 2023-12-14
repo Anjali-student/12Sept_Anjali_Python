@@ -1,0 +1,17 @@
+	**Welcome Customer**
+
+Bill Number: 716
+Customer Name: anjali
+Customer Phone No.: 12333
+=====================================
+Product		QTY		Price
+=====================================
+Bath Soap		22		440
+Wheat		1		80
+-------------------------------------
+Cosmetics Tax			52.8Rs
+Grocery Tax			4.0Rs
+Other Tax			0 Rs
+
+Total Bill			576.8
+-------------------------------------

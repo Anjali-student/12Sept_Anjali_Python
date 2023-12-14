@@ -1,0 +1,16 @@
+	**Welcome Customer**
+
+Bill Number: 575
+Customer Name: aaa
+Customer Phone No.: 11
+=====================================
+Product		QTY		Price
+=====================================
+Wheat		2		160
+-------------------------------------
+Cosmetics Tax			0.0Rs
+Grocery Tax			8.0Rs
+Other Tax			0 Rs
+
+Total Bill			168.0
+-------------------------------------

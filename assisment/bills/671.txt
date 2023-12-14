@@ -1,0 +1,18 @@
+	**Welcome Customer**
+
+Bill Number: 671
+Customer Name: Anjjjj
+Customer Phone No.: 111
+=====================================
+Product		QTY		Price
+=====================================
+Bath Soap		1		20
+Suger		1		170
+Biscuits		1		10
+-------------------------------------
+Cosmetics Tax			2.4Rs
+Grocery Tax			8.5Rs
+Other Tax			10 Rs
+
+Total Bill			212.1
+-------------------------------------
