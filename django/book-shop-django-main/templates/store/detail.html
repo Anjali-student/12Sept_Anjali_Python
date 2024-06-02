@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block title %} {{book.title}} {% endblock title %}
+{% block content %}
+{% csrf_token %}
+
+  <section class="pt-5 m-4">
+    <div class="row g-3">
+        {% comment %} right side {% endcomment %}
+      <div class="col-md-5 col-lg-5 order-md-first bg-light">
+        <img
+          class="img-fluid mx-auto d-block"
+          alt="{{book.title}}"
+          src="{{book.getImage_url}}"
+        />
+      </div>
+      {% comment %} left side {% endcomment %}
+      <div class="col-md-7 col-lg-7 ps-md-3 ps-lg-5">
+        <h1 class="mb-0 h4">{{book.title}}</h1>
+        <p><span class="lead text-info-emphasis">{{book.auther}}</span>{{' '}}(Author)</p>
+        <p>{{book.description|slice:":355"}}...</p>
+        <div class="border">
+          <div class="col border-bottom">
+            <div class="row p-3">
+              <div class="col-6">Hard Copy</div>
+              <div class="col-6 text-end">
+                <span class="h4 fw-bold">${{book.price}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row p-3">
+              <div class="col-6">
+                <label for="select">No.</label>
+                <select id="selectQty">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" 
+                  class="btn btn-secondary btn-sm"
+                  id="addCart"
+                  value="{{book.id}}"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script>
+$(document).ready(function() {
+  $(document).on('click', '#addCart', function(e){
+    e.preventDefault();
+
+    $.ajax({
+      type: 'POST',
+      url: '{% url "cart:order_submit" %}',
+      data: {
+        action: 'post',
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        bookId: $('#addCart').val(),
+        bookQty: $('#selectQty option:selected').text(),
+      },
+      success: function(jsonData) {
+        document.getElementById('cartQty').innerHTML = jsonData.qty
+      },
+      error: function(xhr, errmsg, err) {},
+    });
+  })
+})
+</script>
+
+{% endblock content %}

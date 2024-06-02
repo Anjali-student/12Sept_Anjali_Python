@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% load static %}
+{% csrf_token %}
+{% block title %} Your Choosen Items {% endblock title %}
+
+{% block content %}
+<section class="m-5 pt-4"> 
+    <div class="container">
+        <h5>Your Order: </h5>
+        {% for item in cart %}
+        {% with product=item.product %} 
+        {% include "cart/components/items_list.html" %}
+        {% endwith %}
+        {% endfor %} 
+    
+        <div class="border py-3 px-2 col-12 text-end text-danger-emphasis">
+            <h6 class="fw-bold">
+                Your Total Check: $
+                <span id="subTotal">
+                    {{ cart.get_total_price }}
+                </span>
+            </h6>
+        </div>
+    </div>
+</section>
+{% endblock content %}
