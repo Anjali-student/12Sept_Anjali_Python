@@ -1,0 +1,18 @@
+<!-- product_app/templates/product_app/add_subcategory.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Subcategory for {{ product_id.product_price }}</title>
+</head>
+<body>
+    <h2>Add Subcategory for {{ product.product_name }}</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Subcategory</button>
+    </form>
+
+    <a href="{% url 'product_detail' product_id=product.product_id %}">Back to Subcategory Details</a>
+</body>
+</html>

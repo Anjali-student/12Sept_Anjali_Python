@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products by Category</title>
+</head>
+<body>
+
+    <h2>Products by Category:{{subcategories}} </h2>
+
+    {% if products %}
+        <ul>
+            {% for product in subcategories %}
+                <li>
+                    <h3>{{ product.product_id }} - {{ product.model }}</h3>
+                    <p><strong>Price:</strong> ${{ product.price }}</p>
+                    <p><strong>Ram:</strong> {{ product.ram }}</p>
+                    <img src="{{ product.image.url }}" alt="{{ product.product_name }}" style="max-width: 200px;">
+                    <p><a href="{% url 'product_list' product_id=product.product_id %}">View Details</a></p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products available in this category.</p>
+    {% endif %}
+
+    <p><a href="{% url 'product_list' %}">Back to Product List</a></p>
+
+</body>
+</html>

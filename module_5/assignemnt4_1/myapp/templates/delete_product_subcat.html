@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product Subcategory</title>
+</head>
+<body>
+
+    <h2>Delete Product Subcategory</h2>
+
+    <p>Are you sure you want to delete the subcategory of {{ product.product_name }} - {{ product.model }}?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+
+    <p><a href="{% url 'product_detail' product_id=product.product_id %}">No, cancel and go back to product detail</a></p>
+
+</body>
+</html>

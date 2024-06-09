@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+
+    <h2>Product List</h2>
+
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    <h3>{{ product.product_name }} - {{ product.model }}</h3>
+                    <p><strong>Product ID:</strong> {{ product.product_id }}</p>
+
+
+                    <p><a href="{% url 'product_subcat_list' product.product_id %}">View Details</a></p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products available.</p>
+    {% endif %}
+    <p><a href="{% url 'search_products' %}">Search Products</a></p>
+    <p><a href="{% url 'product_subcat_list' product_id=1 %}">View Product Subcategory Details</a></p>
+
+</body>
+</html>
